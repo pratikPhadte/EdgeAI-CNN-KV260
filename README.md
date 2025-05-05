@@ -7,6 +7,9 @@ This repository contains code for a custom CNN model designed with a structure s
 - **Python**
 - **Kria Pynq DPU**
 
+## Video demo  
+[here](https://github.com/pratikPhadte/EdgeAI-CNN-KV260/blob/main/demo-g-10.mp4).<br>
+
 ## Repo Structure & Description
 
 EdgeAI-CNN-KV260/<br>
