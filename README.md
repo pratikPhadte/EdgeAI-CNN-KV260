@@ -35,6 +35,38 @@ EdgeAI-CNN-KV260/<br>
 
 The CNN model is inspired by the **VGGNet architecture**, optimized for edge deployment. It consists of several convolutional layers with batch normalization and max-pooling layers, followed by dense layers for classification. The model was quantized to INT8 using the Vitis AI Quantizer for efficient deployment on Xilinx devices.
 
+> **Total Parameters:** `370,402`  <br>
+> **Trainable Parameters:** `369,602`  <br>
+> **Non-trainable Parameters:** `800`  <br>
+
+---
+
+###  Layer-wise Breakdown<br>
+
+| Layer Type            | Output Shape        | Parameters |<br>
+|-----------------------|---------------------|------------|<br>
+| **Input**             | (32, 32, 3)         | –          |<br>
+| Conv2D (32 filters)   | (32, 32, 32)        | 896        |<br>
+| BatchNormalization    | (32, 32, 32)        | 128        |<br>
+| Conv2D (32 filters)   | (32, 32, 32)        | 9,248      |<br>
+| BatchNormalization    | (32, 32, 32)        | 128        |<br>
+| MaxPooling2D          | (16, 16, 32)        | 0          |<br>
+| Conv2D (32 filters)   | (16, 16, 32)        | 9,248      |<br>
+| BatchNormalization    | (16, 16, 32)        | 128        |<br>
+| Conv2D (64 filters)   | (16, 16, 64)        | 18,496     |<br>
+| BatchNormalization    | (16, 16, 64)        | 256        |<br>
+| MaxPooling2D          | (8, 8, 64)          | 0          |<br>
+| Conv2D (120 filters)  | (8, 8, 120)         | 69,240     |<br>
+| BatchNormalization    | (8, 8, 120)         | 480        |<br>
+| Conv2D (120 filters)  | (8, 8, 120)         | 129,720    |<br>
+| BatchNormalization    | (8, 8, 120)         | 480        |<br>
+| MaxPooling2D          | (4, 4, 120)         | 0          |<br>
+| Flatten               | (1920,)             | 0          |<br>
+| Dense (64 units)      | (64,)               | 122,944    |<br>
+| Dense (120 units)     | (120,)              | 7,800      |<br>
+| Dense (10 units)      | (10,)               | 1,210      |<br>
+
+
 ## Getting Started
 
 1. **Clone the repository**:
