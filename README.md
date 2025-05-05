@@ -9,7 +9,7 @@ This repository contains code for a custom CNN model designed with a structure s
 
 ## Video demo  
 [here](https://github.com/pratikPhadte/EdgeAI-CNN-KV260/blob/main/demo-g-10.mp4).<br>
-
+<video controls src="demo-g-10.mp4" title="Title"></video>
 ## Repo Structure & Description
 
 EdgeAI-CNN-KV260/<br>
